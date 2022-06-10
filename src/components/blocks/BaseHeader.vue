@@ -28,7 +28,7 @@ export default {
             axios.get('https://api.themoviedb.org/3/search/movie',
                 {
                     params: {
-                        api_key: 'a7a419e37d72e1c36a8e9d8a86beb8d5',
+                        api_key: 'e090893db0c1d71a802be9a80e29d0b7',
                         query: this.searchBar,
                         language: 'it-IT'
                     }
@@ -37,6 +37,20 @@ export default {
                 search.films = response.data.results;
             }).catch((error) => {
                 console.log(error);
+            }),
+
+            axios.get('https://api.themoviedb.org/3/search/tv',
+                {
+                    params: {
+                        api_key: 'e090893db0c1d71a802be9a80e29d0b7',
+                        query: this.searchBar,
+                        language: 'it-IT'
+                    }
+                }
+                ).then((response) => {
+                    search.tvSeries = response.data.results;
+                }).catch((error) => {
+                    console.log(error);
             })
         }
     }
