@@ -1,5 +1,7 @@
 <template>
-  <header>
+  <header class="header">
+
+      <div class="header__logo">BOOLFLIX</div>
 
       <form @submit.prevent="submit()">                     
           <input class="" type="text" placeholder="Inserisci il titolo" v-model="searchBar">
@@ -58,5 +60,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .header{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        padding: .625rem;
+
+
+        &__logo{
+            color: red;
+            font-size: 1.875rem;
+        }
+    }
 
 </style>

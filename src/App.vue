@@ -22,5 +22,6 @@ export default {
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background-color: #303030;
 }
 </style>

@@ -38,15 +38,29 @@ export default {
 
 <style lang="scss" scoped>
 
+  main{
+    background-color: #303030;
+  }
+
   .film-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.375rem;
     li{
       list-style: none;
+      color: white;
+      font-size: .75rem;
     }
   }
 
   .tvSeries-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4.375rem;
     li{
       list-style: none;
+      color: white;
+      font-size: .75rem;
     }
   }
 
