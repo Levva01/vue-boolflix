@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 
+import 'fontawesome-free/css/all.min.css'
+
+
 Vue.config.productionTip = false
 
 new Vue({

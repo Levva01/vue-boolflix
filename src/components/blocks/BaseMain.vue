@@ -1,13 +1,17 @@
 <template>
   <main>
     <h4>Films</h4>
-    <ul>
-        <li class="" v-for="film in search.films" :key="film.id">{{film.title}} , {{film.original_title}} , {{film.original_language}} , {{film.vote_average}}</li>
+    <ul class="film-list">
+      <li v-for="film in search.films" :key="film.id">
+        <BaseCard :info="film"/>
+      </li>
     </ul>
 
     <h4>Tv Series</h4>
-    <ul>
-      <li class="" v-for="series in search.tvSeries" :key="series.id">{{series.name}} , {{series.original_name}} , {{series.original_language}} , {{series.vote_average}}</li>
+    <ul class="tvSeries-list">
+      <li v-for="serie in search.tvSeries" :key="serie.id">
+        <BaseCard :info="serie"/>
+      </li>
     </ul>
   </main>
 </template>
@@ -15,11 +19,13 @@
 
 <script>
 
+import BaseCard from '../commons/BaseCard.vue';
 import search from "../../shared/search";
 
 export default {
     name: 'BaseMain',
     components: {
+      BaseCard,
     },
     data(){
         return {
@@ -31,5 +37,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .film-list{
+    li{
+      list-style: none;
+    }
+  }
+
+  .tvSeries-list{
+    li{
+      list-style: none;
+    }
+  }
 
 </style>

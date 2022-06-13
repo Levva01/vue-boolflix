@@ -2,7 +2,8 @@
   <div id="app">
     <BaseHeader/>
     <BaseMain/>
-  </div>
+    
+ </div>
 </template>
 
 <script>
